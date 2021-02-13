@@ -9,7 +9,7 @@ import {
   MenuUnfoldOutlined,
   MenuFoldOutlined,
 } from "@ant-design/icons";
-import logo from "./../../../assets/img/logo.png";
+import logo from "./../../../assets/img/logo.svg";
 import { Button, Badge, Popover, Tooltip, Avatar, Row, Col } from "antd";
 import { logOut } from "../../../redux/actions";
 import { connect } from "react-redux";

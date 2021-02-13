@@ -1,12 +1,12 @@
 import axios from "axios";
 import siteUrl from "./const";
 
-export const vac = axios.create({
+export const admin = axios.create({
   baseURL: `${siteUrl}api`,
   headers: { "Content-Type": "application/json" },
 });
 
-vac.interceptors.request.use(
+admin.interceptors.request.use(
   (config) => {
     config.headers["Authorization"] = localStorage.getItem("access_token")
       ? "Bearer " + localStorage.getItem("access_token")
@@ -21,4 +21,4 @@ vac.interceptors.request.use(
   }
 );
 
-export default vac;
+export default admin;

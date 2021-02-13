@@ -417,7 +417,7 @@ m-10 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #51bfa4;
+  background-color: #404040;
   z-index: 99999;
 }
 
@@ -492,7 +492,7 @@ m-10 {
   width: 80%;
 }
 .sider-btn img {
-  height: 95%;
+  height: 80%;
   width: auto;
 }
 
@@ -522,11 +522,11 @@ m-10 {
   right: 20px;
 }
 .top-menu .top-menu-navigation .circle-notification {
-  background: #51bfa4;
+  background: #404040;
   transition: 0.3s ease-out;
 }
 .top-menu .top-menu-navigation .circle-notification:hover {
-  background: #327867;
+  background: #171717;
   transition: 0.3s ease-out;
 }
 
@@ -783,7 +783,7 @@ m-10 {
   padding: 0 !important;
 }
 .fullmodal .ant-modal-header .custom-modal-header {
-  background: #51bfa4;
+  background: #404040;
   position: fixed;
   width: 100%;
   top: 0;

@@ -3,11 +3,9 @@ import { Menu } from "antd";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import {
-  QuestionCircleOutlined,
   FundOutlined,
 } from "@ant-design/icons";
 import { useTranslation } from "react-i18next";
-import { getStock } from "./../../redux/actions";
 
 const { SubMenu } = Menu;
 

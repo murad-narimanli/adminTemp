@@ -1,3 +1,6 @@
+@import "../../../../assets/css/mixins";
+@import "../../../../assets/css/variables";
+
 .admin-login-box {
   width: 400px;
   padding: 20px 30px;
@@ -6,8 +9,8 @@
       width: 100%;
       height: 45px;
       padding: 0 10px;
-      background-color: #ebe6e2;
-      color: #22453e;
+      background-color: $inputbackcolor;
+      color: $inputcolor;
       font-weight: bold;
       margin: 15px 0 5px 0;
       outline: 0;
@@ -16,11 +19,11 @@
       }
     }
     input[type="submit"] {
-      background-color: #51bfa4;
-      color: white;
+      background-color: $maincolor;
+      color: $whitecolor;
       cursor: pointer;
       &:hover {
-        background-color: #327867;
+        background-color: $darkmaincolor;
       }
     }
   }

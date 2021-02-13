@@ -9,12 +9,12 @@ import {
   SET_NOTIFICATION,
   SET_STOCK,
 } from "./../types";
-import agros from "./../../const/api";
+import admin from "./../../const/api";
 import history from "./../../const/history";
 import { ourls } from "../../utils/options";
 
 export const getStock = () => async (dispatch) => {
-  await agros.get("auth/stockinfo").then((res) => {
+  await admin.get("auth/stockinfo").then((res) => {
     dispatch({
       type: SET_STOCK,
       payload: res.data,
@@ -24,7 +24,7 @@ export const getStock = () => async (dispatch) => {
 
 export const getUserData = () => async (dispatch) => {
   dispatch({ type: LOADING_ON });
-  await agros
+  await admin
     .get("auth")
     .then((res) => {
       console.log("Here asdfasd");
@@ -57,7 +57,7 @@ export const logInUser = (username, password) => async (dispatch) => {
     });
   } else {
     dispatch({ type: LOADING_ON });
-    await agros
+    await admin
       .post(`auth/login`, JSON.stringify({ username, password }))
       .then((res) => {
         localStorage.setItem("access_token", res.data.token);
@@ -90,7 +90,7 @@ export const getAllOptions = (keys, props) => async (dispatch) => {
     let ind = 0;
     keys.forEach(async (key) => {
       if (!props[key].length) {
-        await agros.get(ourls[key]).then((res) => {
+        await admin.get(ourls[key]).then((res) => {
           obj[key] = res.data;
           ind++;
         });
@@ -117,7 +117,7 @@ export const getOptions = (keys, props, lang) => async (dispatch) => {
     let ind = 0;
     keys.forEach(async (key) => {
       if (!props[lang][key].length) {
-        await agros.get(ourls[key]).then((res) => {
+        await admin.get(ourls[key]).then((res) => {
           console.log(res.data)
           obj[lang][key] = res.data;
           ind++;

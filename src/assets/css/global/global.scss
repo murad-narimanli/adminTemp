@@ -1,52 +1,5 @@
-@mixin border-radius($v) {
-  -webkit-border-radius: $v;
-  -moz-border-radius: $v;
-  border-radius: $v;
-}
-@mixin display($display: unset, $justify: unset, $align: unset, $text: unset) {
-  display: $display;
-  justify-content: $justify;
-  align-items: $align;
-  text-align: $text;
-}
-@mixin position(
-  $position,
-  $top: unset,
-  $left: unset,
-  $bottom: unset,
-  $right: unset
-) {
-  position: $position;
-  top: $top;
-  left: $left;
-  bottom: $bottom;
-  right: $right;
-}
-@mixin box-shadow($props) {
-  -webkit-box-shadow: $props;
-  -moz-box-shadow: $props;
-  box-shadow: $props;
-}
-@mixin transform($props) {
-  -moz-transform: $props;
-  -webkit-transform: $props;
-  -o-transform: $props;
-  -ms-transform: $props;
-  transform: $props;
-}
-@mixin size($height, $width) {
-  height: $height;
-  width: $width;
-}
-@mixin sameSize($size) {
-  height: $size;
-  width: $size;
-}
-@mixin appearance {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
+@import "../mixins";
+@import "../variables";
 
 body {
   background-color: #f0f2f5 ;
@@ -388,7 +341,7 @@ m-10 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: rgba(81, 191, 164, 1);
+  background-color: $maincolor;
   z-index: 99999;
 }
 .loader,
@@ -461,7 +414,7 @@ m-10 {
     width: 80%;
   }
   img {
-    height: 95%;
+    height: $logowidth;
     width: auto;
   }
 }
@@ -488,10 +441,10 @@ m-10 {
     position: absolute;
     right: 20px;
     .circle-notification {
-      background: #51bfa4;
+      background: $maincolor;
       transition: 0.3s ease-out;
       &:hover {
-        background: #327867;
+        background: $darkmaincolor;
         transition: 0.3s ease-out;
       }
     }
@@ -756,7 +709,7 @@ m-10 {
   .ant-modal-header {
     padding: 0 !important;
     .custom-modal-header {
-      background: #51bfa4;
+      background: $maincolor;
       position: fixed;
       width: 100%;
       top: 0;

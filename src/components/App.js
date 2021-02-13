@@ -9,7 +9,7 @@ import MenuList from "./Elements/MenuList";
 import { Layout } from "antd";
 import { Link } from "react-router-dom";
 import { Button, Drawer, notification } from "antd";
-import logo from "../assets/img/logo.png";
+import logo from "../assets/img/logo.svg";
 import {
   MenuUnfoldOutlined,
   MenuFoldOutlined,
@@ -176,7 +176,6 @@ class App extends React.Component {
 const mapStateToProps = ({ user, loader, notification }) => {
   return {
     isLoggedIn: user.isLoggedIn,
-    // isLoggedIn: true,
     isLoading: loader,
     notification,
   };

@@ -27,7 +27,7 @@ const Login = (props) => {
   return (
       <Row className="login-page w-100 h-100vh">
         <Col lg={10} md={12} >
-          <div className="flex all-center h-100vh">
+          <div className="flex all-center h-100vh loginbackColor">
             <div className="admin-login-box login-page">
               <div className="admin-login-row">
                 <h1 className="text-center">Daxil ol</h1>
@@ -58,14 +58,7 @@ const Login = (props) => {
           </div>
         </Col>
         <Col lg={14} md={12} sm={0}>
-          <div
-              className="b-100 h-100vh"
-              style={{
-                backgroundImage: `url(${mainBg})`,
-                backgroundSize:'cover',
-                backgroundRepeat:'no-repeat'
-              }}
-          ></div>
+          <div className="b-100 h-100vh loginbackground"></div>
         </Col>
       </Row>
   );

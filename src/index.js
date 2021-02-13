@@ -4,7 +4,8 @@ import App from './components/App';
 import './assets/css/animate.css'
 import './assets/css/custom/custom.css';
 import 'antd/dist/antd.css';
-import './assets/css/override.css';
+// import './assets/css/override.css';
+import './assets/css/override/override.css'
 import './assets/css/global/global.css';
 // import './assets/css/main/main.css'
 import "./i18n";
